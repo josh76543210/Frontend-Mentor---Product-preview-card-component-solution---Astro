@@ -1,0 +1,23 @@
+---
+import CartImage from '../images/icon-cart.svg';
+---
+
+<button class="flex-center"><img src={CartImage.src} alt=""><span>Add to Cart</span></button>
+
+<style>
+  button{
+    gap: calc((10 / 16) * 1rem);
+    width: 100%;
+    border: none;
+    background-color: var(--dark-cyan);
+    border-radius: calc((10 / 16) * 1rem);
+    color: var(--white);
+    font-weight: 700;
+    padding: calc((15 / 16) * 1rem);
+  }
+
+  button:hover{
+    cursor: pointer;
+    background-color: hsl(158, 36%, 15%);
+  }
+</style>

@@ -1,0 +1,37 @@
+---
+export interface Props {
+  oldPrice: string;
+  newPrice: string;
+}
+const {oldPrice, newPrice} = Astro.props as Props;
+---
+<div class="container">
+<p class="new-price">${newPrice}</p>
+<p class="old-price">${oldPrice}</p>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+    gap: calc((20 / 16) * 1rem);
+    margin-bottom: calc((10 / 16) * 1rem);
+  }
+
+  p{
+    display: inline-block;
+  }
+
+  .new-price{
+    font-family: 'Fraunces', serif;
+    color: var(--dark-cyan);
+    font-size: calc((36 / 16) * 1rem);
+    font-weight: 700;
+  }
+
+  .old-price{
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+    font-weight: 500;
+  }
+</style>
